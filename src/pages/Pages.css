@@ -1,0 +1,25 @@
+.side__content{
+    width: 20%;
+    flex:0 0 20%;
+    transition: all 0.3s ease-in-out;
+}
+
+.side__content .sidebar{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background: #fff;
+    max-height: calc(100% - 70px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+/* .side__content .sidebar::-webkit-scrollbar{
+    opacity: 0 !important;
+}
+
+.side__content:hover .sidebar::-webkit-scrollbar{
+    opacity: 1 !important;
+} */

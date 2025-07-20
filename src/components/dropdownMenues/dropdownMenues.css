@@ -1,0 +1,103 @@
+/* .notification{
+    width: 200px !important;
+} */
+
+.notification__show{
+    gap: 100px;
+    cursor:not-allowed ;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.profile__img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:1px solid #0858f7  ;
+    padding: 3px;
+}
+.notification__panel{
+    background: #ebf6ff;
+    /* padding: 10px; */
+    width: 300px;
+    border-radius: 8px;
+}
+.notification__panel h4{
+    font-size: 14px;
+    font-weight: 600;
+}
+.content__not p{
+    font-size: 12px;
+    color: #0858f7;
+    font-weight: 600px;
+}
+.content__not h4{
+     font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+}
+.notif__icon{
+     border: 2px solid lightgray;
+    border-radius: 50%;
+    color: white;
+    font-size: 13px;
+    height: 25px;
+    line-height: 21px;
+    position: absolute;
+    text-align: center;
+     top: 20px; 
+ width: 25px;
+    left: -5px;
+    background: red; 
+
+}
+
+.messages{
+    overflow-x: hidden;
+    height: 300px;
+    overflow-y: scroll;
+}
+.vertical__dotted{
+    cursor: pointer;
+}
+
+.setting__icons{
+    cursor: pointer !important;
+}
+
+.notification__panel:hover{
+ background: #e0e6f3 !important;
+  transition: all 0.2 ease-in-out;
+}
+
+.cart__images{
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    gap: 0;
+    justify-content: flex-start;
+    width: 80px;
+}
+
+.profile__img_span{
+        background-color: #fff ;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    width: 40px;
+     border:1px solid #0858f7  ;
+    
+
+    padding: 3px;
+}
+
+.img__2{
+    margin-left: -20px;
+}
+.img__3{
+    margin-left: -20px;
+}
