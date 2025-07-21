@@ -259,6 +259,7 @@ font-weight: 600;
 
 .colapse{
   height: auto;
+  padding: 10px 0;
 }
 .colapse .submenu{
   opacity: 1;
