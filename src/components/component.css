@@ -324,3 +324,10 @@ font-weight: 600;
 .logoutBox button svg{
   font-size: 18px !important;
 }
+
+.signin__btn{
+  background: rgb(78, 78, 235) !important;
+  color: white !important;
+  border-radius: 5px !important;
+  
+}

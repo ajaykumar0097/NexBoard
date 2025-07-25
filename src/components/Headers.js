@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/nd-removebg-preview.png";
 import Button from "@mui/material/Button";
 import { MdMenuOpen } from "react-icons/md";
@@ -17,8 +17,16 @@ import Notificationdrop from "./dropdownMenues/Notificationdrop";
 import ProfileMenu from "./dropdownMenues/ProfileMenu";
 import CartMenu from "./dropdownMenues/CartMenu";
 import EmailMenu from "./dropdownMenues/EmailMenu";
+import { MyContext } from "../App";
 
 const Headers = () => {
+
+
+
+const context=useContext(MyContext)
+console.log(context);
+
+      const navigate=useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [notification, setNotification] = React.useState(null);
   const [email, setEmail] = React.useState(null);
@@ -29,10 +37,13 @@ const Headers = () => {
   const openCart = Boolean(cart);
 
   const handleMyAccClick = (event) => {
+
     setAnchorEl(event.currentTarget);
   };
   const handleMyAccClose = () => {
     setAnchorEl(null);
+    context.setIsToggleSideBar(false)
+    navigate("/login")
   };
 
   const handleMyNotificationClick = (event) => {
@@ -56,6 +67,16 @@ const Headers = () => {
     setCart(null);
   };
 
+
+
+const onHandleSignIn=()=>{
+navigate("/Login")
+}
+
+
+console.log(context.isToggleSideBar,"hhhhh");
+
+  const [isLogIn,setIsLogin]=useState(false)
   return (
     <header className="main__header">
       <div className="container-fluid w-100">
@@ -68,8 +89,8 @@ const Headers = () => {
           </div>
 
           <div className="col-md-3 d-flex align-items-center">
-            <Button className="menu__btn me-2">
-              <MdMenuOpen className="menubtn__icon" />
+            <Button className="menu__btn me-2" onClick={()=>context.setIsToggleSideBar(!context.isToggleSideBar)}>
+             {context.isToggleSideBar? <MdMenuOpen className="menubtn__icon" />:<MdOutlineMenu className="menubtn__icon" />}
             </Button>
             <Searchbox />
           </div>
@@ -103,6 +124,7 @@ const Headers = () => {
             </div>
 
             {/* <Button className="menu__btn me-2"><MdMenuOpen className="menubtn__icon"/></Button> */}
+            {!context.isToggleSideBar?<Button className="signin__btn px-1 mx-1" onClick={onHandleSignIn}>Sign In</Button>:
 
             <Button
               className="my__account d-flex align-items-center"
@@ -123,6 +145,7 @@ const Headers = () => {
                 <p className="mb-0">@ajaykumar</p>
               </div>
             </Button>
+            }
           </div>
         </div>
       </div>

@@ -14,6 +14,7 @@
     max-height: calc(100% - 70px);
     overflow-y: scroll;
     overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
 
 }
 /* .side__content .sidebar::-webkit-scrollbar{
@@ -50,7 +51,7 @@
 .dashboardWrapperRow .box{
 width: 100%;
 height: 100%;
-background: #ccc;
+/* background: #ccc; */
 }
 
 .col1 h4{
@@ -124,7 +125,321 @@ background: #ccc;
 }
 
 .graphBox{
-    background-image: linear-gradient(#1e5dd0,#125be8);
+    background-image: linear-gradient(#739ef0,#0f4ece);
     border-radius: 10px;
     padding: 25px;
+}
+
+.dotted__svg{
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+
+.green__text{
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.green__texts{
+    font-size: 15px;
+    color: #89ecb3;
+   font-weight: 600;
+   gap: 2;
+}
+
+.card{
+    margin: 15px 0;
+    border-radius: 10px;
+
+}
+
+.table__heading{
+    font-size: 18px;
+    font-weight: bold;
+    color: #403e57;
+}
+
+.dropdow__label{
+        font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #403e57;
+}
+
+.select__input{
+        background-color: #f0f0f0;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 0 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 45px;
+}
+
+.table .thead-dark th{
+    background: #1866ee !important;
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 14px;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #403e57;
+}
+.table .tbody td{
+    font-size: 13px;
+     color: #403e57;
+     font-weight: 500;
+}
+
+.table tbody .actions button{
+    min-width: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+.eye{
+    background: rgba(203, 60, 231, 0.1) !important;
+}
+.pencil{
+    background: #ddfbe9 !important;
+}
+.delete{
+    background: #ffdfe4 !important;
+}
+.v-align{
+    vertical-align: middle !important;
+}
+
+.product__img{
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 7px 15px 0 rgba(#000, 6%);
+    width: 45px;
+    height: 45px;
+}
+
+.tableFooter{
+    padding-bottom: 20px;
+}
+
+.pagination{
+    margin-left: auto;
+}
+.header__z{
+    z-index: 100000;
+}
+
+.sidebar__toggle{
+width: 0%;
+flex: 0 0 0%;
+ opacity: 0;
+ transition:  all 0.3s ease-in-out;
+}
+
+/* .content{
+    width: 80%;
+    flex: 0 0 80%;
+    transition: all 0.3s ease-in-out;
+   
+} */
+
+.main__toggle{
+    width: 100%;
+    flex: 0 0 100%;
+     transition:  all 0.3s ease-in-out;
+}
+
+.sidebar__toggle .sidebar{
+    left: -100;
+}
+
+.loginSection{
+width: 100%;
+height: 100vh;
+padding: 35px 40px;
+}
+
+.login__logo img{
+    height: 55px;
+}
+
+.login__logo h4{
+        font-size: 20px;
+    font-weight: 600;
+    color: #403e57;
+}
+
+.login__form{
+        background-color: #f0f0f0;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 35px;
+          height: 500px;
+        width: 360px;
+}
+
+.input__fields{
+        align-items: center;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    display: flex;
+    gap: 0;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding: 0 12px;
+    height: 42px;
+        border-color:#0858f7;
+  
+}
+
+.input__fields svg {
+    font-size: 20px;
+    color: #0858f7;
+}
+
+.input__fields input {
+        background: none;
+    border: none;
+    color: #5e5d72;
+    outline: none;
+}
+.input__fields select {
+        background: none;
+    border: none;
+    color: #5e5d72;
+    outline: none;
+}
+.login__button button{
+    width: 100%;
+    background:  #0858f7;
+    color: #fff;
+    border-radius: 8px;
+    height: 42px;
+}
+.or__line{
+    margin: 15px 0 18px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.or__line::before{
+        background-color: #d1d1d1;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 17px;
+    width: 100%;
+    z-index: -1;
+}
+.or__line span{
+        background-color: #f0f0f0;
+    border: 1px solid #d1d1d1;
+    border-radius: 50%;
+    color: #5e5d72;
+    display: inline-block;
+    font-size: 15px;
+    height: 36px;
+    line-height: 32px;
+    text-align: center;
+    width: 36px;
+}
+
+.facebook button{
+background: #3b5998 !important;
+text-transform: capitalize !important;
+}
+
+.twitter button{
+    background: #00acee !important;
+    text-transform: capitalize !important;
+}
+
+.login__register{
+         background-color: #f0f0f0;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 35px;
+          /* height: 200px; */
+        width: 360px;
+}
+.sign__up{
+      background-color: #f0f0f0;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 35px;
+         
+        width: 400px;
+}
+
+.register__main{
+   align-items: center;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    position: relative;
+    width: 65%;
+    z-index: 1;
+    background: linear-gradient(to right, #f0f0f0,#f8f8f8);
+}
+
+.register__background__img{
+        height: 100%;
+    left: 0;
+    opacity: .08;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.main__content{
+        max-width: 700px;
+    padding: 30px;
+}
+
+.main__content h2{
+        font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.main__content p{
+font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.home__btn button{
+    color: #fff;
+     background: #00acee !important;
+    text-transform: capitalize !important;
+    height: 55px;
+    max-width: 130px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.home__btn svg{
+    height: 30px;
+    width: 30px;
+}
+
+.forgot__form{
+    
+             background-color: #f0f0f0;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 35px;
+         
+        width: 400px;
 }
