@@ -27,7 +27,7 @@ const EmailMenu = ({email,openEmail,handleMyEmailClose}) => {
            className="notification p-4"
            open={openEmail}
            onClose={handleMyEmailClose}
-           //   onClick={handleMyEmailClose}
+             onClick={handleMyEmailClose}
            slotProps={{
              paper: {
                elevation: 0,
@@ -77,12 +77,12 @@ const EmailMenu = ({email,openEmail,handleMyEmailClose}) => {
            <Divider className="pb-2" />
    
            <div className="messages">
-             <EmailMsg />
-             <EmailMsg />
-             <EmailMsg />
-             <EmailMsg />
-             <EmailMsg />
-             <EmailMsg />
+             <EmailMsg handleMyEmailClose={handleMyEmailClose}/>
+             <EmailMsg handleMyEmailClose={handleMyEmailClose}/>
+             <EmailMsg handleMyEmailClose={handleMyEmailClose}/>
+             <EmailMsg handleMyEmailClose={handleMyEmailClose}/>
+             <EmailMsg handleMyEmailClose={handleMyEmailClose}/>
+             <EmailMsg handleMyEmailClose={handleMyEmailClose}/>
            </div>
          </Menu>
    
@@ -91,7 +91,7 @@ const EmailMenu = ({email,openEmail,handleMyEmailClose}) => {
            id="email"
            className="email"
            open={setting}
-           // onClose={handleMyEmailClose}
+           onClose={handleMyEmailClose}
            onClick={onNotSettingClose}
            slotProps={{
              paper: {

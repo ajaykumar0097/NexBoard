@@ -29,7 +29,9 @@ header .logo span{
   top: 0; 
   z-index: 10000;
 }
-
+body.dark .main__header{
+  background: #112143 !important;
+}
 .logo_img {
   height: 45px;
 }
@@ -39,7 +41,10 @@ header .logo span{
   font-size: 24px;
   font-weight: 900;
 }
-
+body.dark .logo__text{
+  color: #fff;
+  opacity: 0.9;
+}
 .logo__link {
   text-decoration: none !important;
 }
@@ -61,6 +66,12 @@ header .logo span{
   border-radius: 50% !important;
 }
 
+body.dark .menu__btn{
+  background: #112755 !important;
+}
+body.dark .menu__btn svg{
+  color: #fff;
+}
 .menubtn__icon:hover {
   color: #0858f7 !important;
   transition: all 0.2 ease-in-out;
@@ -73,6 +84,17 @@ header .logo span{
   border-radius: 6px;
 }
 
+body.dark .search__box{
+  background: #12254e !important;
+}
+
+body.dark .search__input,body.dark .search__icon{
+  color: #fff;
+}
+
+body.dark .search__input::-webkit-input-placeholder{
+  color: #fff;
+}
 .search__input {
   background: transparent;
   border: 0px;
@@ -88,6 +110,7 @@ header .logo span{
   font-size: 18px;
   color: #292929;
 }
+
 
 /* .my__account .user__img .rounded-circle{
 display: flex;
@@ -121,12 +144,21 @@ height: 40px;
   opacity: 0.7;
   color: #000;
 }
-
+body.dark .profile__details *{
+  color: rgba(255 , 255, 255, 0.8);
+}
 .my__account {
   text-align: left;
   text-transform: capitalize;
 }
+body.dark .MuiPaper-elevation{
+  background-color: #12254e !important;
+  color: #fff !important;
+}
 
+body.dark .MuiPaper-elevation li *{
+  color: #fff !important;
+}
 .notification__header h4 {
   font-size: 18px !important;
   font-weight: 600;
@@ -175,6 +207,10 @@ font-weight: 600;
 
 }
 
+body.dark .sidebar__list li button,body.dark  .sidebar__list li button .icon svg{
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .sidebar__list li button .icon{
   display: flex;
   align-items: center;
@@ -202,7 +238,12 @@ font-weight: 600;
 .sidebar__list li button:hover{
   background: #f1f1f1;
 }
-
+body.dark .sidebar__list li button:hover{
+background: rgba(255, 255, 255,0.1);
+}
+ body.dark .sidebar__list  li button.active{
+  background: rgba(255, 255, 255,0.1) !important;
+ }
 
 .sidebar__list .submenu {
   padding: 0px 45px;
@@ -220,7 +261,9 @@ font-weight: 600;
   left: 25px;
   background: rgba(0, 0, 0, 0.2);
 }
-
+body.dark .sidebar__list .submenu ::before{
+  background: rgba(255, 255, 255, 0.8);
+}
 
 .sidebar__list .submenu li{
   width: 100%;
@@ -237,8 +280,16 @@ font-weight: 600;
    transition: all 0.5s linear;
 }
 
+
+body.dark .sidebar__list .submenu li a{
+  color: rgba(255, 255, 255, 0.7);
+}
 .sidebar__list .submenu li a:hover{
   color:#0858f7;
+}
+
+body.dark .sidebar__list .submenu li a:hover{
+   color:#0858f7;
 }
 
 .sidebar__list li button.active{
@@ -330,4 +381,8 @@ font-weight: 600;
   color: white !important;
   border-radius: 5px !important;
   
+}
+
+.sidebar__icons{
+  background: none !important;
 }

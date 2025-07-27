@@ -31,3 +31,17 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #0858f7;
 } 
+
+
+body.dark .content{
+  background: #071739 !important;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #fff;
+  opacity: 0.2;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #301a92;
+}

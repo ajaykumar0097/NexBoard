@@ -9,6 +9,9 @@
     font-weight: 600;
 
 }
+body.dark .notification__show *{
+    color: #fff !important;
+}
 .profile__img{
     width: 40px;
     height: 40px;
@@ -68,6 +71,9 @@
 .notification__panel:hover{
  background: #e0e6f3 !important;
   transition: all 0.2 ease-in-out;
+}
+body.dark .notification__panel{
+    background:#12254e !important;
 }
 
 .cart__images{

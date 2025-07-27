@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import Dashboard from "./Dashboard";
 import "./Pages.css";
 import { MyContext } from "../App";
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   const context=useContext(MyContext)
@@ -13,11 +14,11 @@ const MainLayout = () => {
         <Headers />
       </div>
       <div className="main d-flex">
-        <div className={` ${context.isToggleSideBar?"sidebar__toggle":"side__content"}`}>
+        <div className={` ${context.isToggleSideBar1?"sidebar__toggle":"side__content"}`}>
           <Sidebar />
         </div>
         <div className={` ${context.isToggleSideBar?"main__toggle":"content"}`}>
-          <Dashboard />
+          <Outlet />
         </div>
       </div>
     </>

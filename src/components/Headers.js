@@ -48,6 +48,8 @@ console.log(context);
 
   const handleMyNotificationClick = (event) => {
     setNotification(event.currentTarget);
+        handleMyEmailClose()
+    handleMyCartClose()
   };
   const handleMyNotificationClose = () => {
     setNotification(null);
@@ -55,6 +57,9 @@ console.log(context);
 
   const handleMyEmailClick = (event) => {
     setEmail(event.currentTarget);
+
+    handleMyNotificationClose()
+    handleMyCartClose()
   };
   const handleMyEmailClose = () => {
     setEmail(null);
@@ -62,6 +67,9 @@ console.log(context);
 
   const handleMyCartClick = (event) => {
     setCart(event.currentTarget);
+    handleMyEmailClose()
+    handleMyNotificationClose()
+
   };
   const handleMyCartClose = () => {
     setCart(null);
@@ -89,14 +97,14 @@ console.log(context.isToggleSideBar,"hhhhh");
           </div>
 
           <div className="col-md-3 d-flex align-items-center">
-            <Button className="menu__btn me-2" onClick={()=>context.setIsToggleSideBar(!context.isToggleSideBar)}>
-             {context.isToggleSideBar? <MdMenuOpen className="menubtn__icon" />:<MdOutlineMenu className="menubtn__icon" />}
+            <Button className="menu__btn me-2" onClick={()=>context.setIsToggleSideBar1(!context.isToggleSideBar1)}>
+             {context.isToggleSideBar1? <MdMenuOpen className="menubtn__icon" />:<MdOutlineMenu className="menubtn__icon" />}
             </Button>
             <Searchbox />
           </div>
 
           <div className="col-md-7 d-flex align-items-center justify-content-end">
-            <Button className="menu__btn me-2">
+            <Button className="menu__btn me-2" onClick={()=>context.setThemeMode(!context.themeMode)}>
               <MdOutlineLightMode className="menubtn__icon" />
             </Button>
 

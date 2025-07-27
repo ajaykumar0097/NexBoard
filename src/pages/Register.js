@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../assets/images/nd-removebg-preview.png";
 import { IoMdMail } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
@@ -20,6 +20,11 @@ const Register = () => {
   const onSignUp = () => {
     navigate("/login");
   };
+  
+    useEffect(()=>{
+      window.scrollTo(0,0)
+    //   context.setIsToggleSideBar1(false)
+    },[])
   return (
     <>
       <div className="row container-fluid m-0 p-0">
@@ -30,7 +35,7 @@ const Register = () => {
             className="register__background__img"
           />
           <div className="main__content">
-            <h2>Best ux/ui fashion ecommerce dashboard & admin panel</h2>
+            <h2>Best ux/ui fashion <span className="text-secondary">ecommerce dashboard</span> & admin panel</h2>
             <p>
               Elit Iusto dolore libero recusandae dolor dolores explicabo ullam
               cum facilis aperiam alias odio quam excepturi molestiae omnis
@@ -64,6 +69,7 @@ const Register = () => {
                       type="text"
                       className="w-100 px-1 mx-1"
                       placeholder="enter your name"
+                      autoFocus
                     />
                   </div>
                   <div className="input__fields">

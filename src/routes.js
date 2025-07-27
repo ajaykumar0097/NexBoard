@@ -4,6 +4,8 @@ import MainLayout from "./pages/MainLayout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
+import ProductView from "./pages/ProductView";
+import Ecommerce from "./pages/Ecommerce";
 
 export const router = createBrowserRouter([
   {
@@ -11,26 +13,31 @@ export const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path: "/",
+        path: "dashboard",
         element: <Dashboard />,
+        children: [
+          {
+            path: "Ecommerce",
+            element: <Ecommerce />,
+          },
+          {
+            path: "productview",
+            element: <ProductView />,
+          },
+        ],
       },
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-       
     ],
   },
   {
-        path: "/Login",
-        element: <Login />,
-      },
-        {
-        path: "/Register",
-        element: <Register />,
-      },
-      {
-        path: "/ForgotPassword",
-        element: <ForgotPassword />,
-      },
+    path: "/Login",
+    element: <Login />,
+  },
+  {
+    path: "/Register",
+    element: <Register />,
+  },
+  {
+    path: "/ForgotPassword",
+    element: <ForgotPassword />,
+  },
 ]);

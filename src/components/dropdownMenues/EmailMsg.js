@@ -10,7 +10,7 @@ import PersonAdd from "@mui/icons-material/PersonAdd";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 
-const EmailMsg = () => {
+const EmailMsg = ({handleMyEmailClose}) => {
   const [sett, setSett] = React.useState(null);
   const setting = Boolean(sett);
 
@@ -54,7 +54,7 @@ const EmailMsg = () => {
         id="email"
         className="email"
         open={setting}
-        // onClose={handleMyEmailClose}
+        onClose={handleMyEmailClose}
         onClick={onNotSettingClose}
         slotProps={{
           paper: {
