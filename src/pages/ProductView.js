@@ -14,6 +14,7 @@ import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
 import FeedbackChat from "./feedbackChat/FeedbackChat";
 import { HiDotsVertical } from "react-icons/hi";
+import Button from "@mui/material/Button";
 
 const labels = {
   0.5: "Useless",
@@ -235,18 +236,78 @@ const ProductView = () => {
           <div className="col-md-1"></div>
         </div>
         <div className="my-4 mx-2">
-          <h6 className="pro__heading">customer reviews</h6>
+          <h6 className="pro__heading">Customer Reviews</h6>
         </div>
-        <div className="my-4 mx-2">
+        <div className="my-4 mx-2 ">
           <div className="d-flex justify-content-between">
-            <div>
-              <FeedbackChat />
+            <div className="w-100 px-3">
+              <FeedbackChat name={"Ajay Kumar"} time={"25 minutes ago!"} />
             </div>
-            <div>
+            <div className="vertical__dots">
               <HiDotsVertical />
             </div>
           </div>
         </div>
+
+        <div className="my-4 px-2 ">
+          <div className="d-flex justify-content-between">
+            <div className="w-100 px-3 ms-5">
+              <FeedbackChat name={"Ram"} time={"1 week ago"} />
+            </div>
+            <div className="vertical__dots">
+              <HiDotsVertical />
+            </div>
+          </div>
+        </div>
+
+        <div className="my-4 px-2 ">
+          <div className="d-flex justify-content-between">
+            <div className="w-100 px-3 ms-5">
+              <FeedbackChat name={"Ram"} time={"1 week ago"} />
+            </div>
+            <div className="vertical__dots">
+              <HiDotsVertical />
+            </div>
+          </div>
+        </div>
+
+        <div className="my-4 mx-2 ">
+          <div className="d-flex justify-content-between">
+            <div className="w-100 px-3">
+              <FeedbackChat name={"Ajay Kumar"} time={"25 minutes ago!"} />
+            </div>
+            <div className="vertical__dots">
+              <HiDotsVertical />
+            </div>
+          </div>
+        </div>
+
+        <div className="my-4 px-2 ">
+          <div className="d-flex justify-content-between">
+            <div className="w-100 px-3 ms-5">
+              <FeedbackChat name={"Ram"} time={"1 week ago"} />
+            </div>
+            <div className="vertical__dots">
+              <HiDotsVertical />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="my-4 mx-2">
+        <h6 className="pro__heading">review reply form</h6>
+      </div>
+
+      <div className="my-4 mx-2">
+        <textarea
+          className="feedback__textarea w-100 p-3"
+          name=""
+          placeholder="Type here...."
+          id=""
+        ></textarea>
+      </div>
+      <div className="my-4 mx-2">
+        <Button className="w-100 dro__btn py-3">Drop Your Replies</Button>{" "}
       </div>
     </div>
   );

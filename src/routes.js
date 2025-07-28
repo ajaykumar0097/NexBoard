@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import ProductView from "./pages/ProductView";
 import Ecommerce from "./pages/Ecommerce";
+import ProductUpload from "./pages/ProductUpload/ProductUpload"
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
           {
             path: "productview",
             element: <ProductView />,
+          },
+                    {
+            path: "ProductUpload",
+            element: <ProductUpload />,
           },
         ],
       },
